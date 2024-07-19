@@ -2,9 +2,13 @@
 
  split -l <num_of_records> <input_file> <output_file>
 
-
+Connetc to Postgresql:
+========================
+psql -h localhost -p 31432 -d postgresdb -U admin
 
 \d+ public.NPI_DATA
+
+select count(*) from NPI_DATA;
 
 For copy command, the file has to be on server. WHen runnng with Postgres on WSL2 MicroK8s, /home/ubuntu/postgres is mounted to postgres /var/lib/postgresql/db . Therefore- 
   
